@@ -2159,13 +2159,20 @@ section {
     position: fixed;
     width: 20px;
     height: 20px;
-    border: 2px solid var(--primary-color);
+    background-color: white;
     border-radius: 50%;
     pointer-events: none;
     transform: translate(-50%, -50%);
     z-index: 9999;
-    transition: width 0.3s, height 0.3s, background-color 0.3s;
     mix-blend-mode: difference;
+    display: none; /* Hidden by default */
+}
+
+/* Show cursor only on non-touch devices */
+@media (hover: hover) and (pointer: fine) {
+    .cursor {
+        display: block;
+    }
 }
 
 .cursor.hovered {

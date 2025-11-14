@@ -141,26 +141,33 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    // Custom cursor
+    // Custom cursor - only for non-touch devices
     const cursor = document.querySelector('.cursor');
+    const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0 || navigator.msMaxTouchPoints > 0;
     
-    document.addEventListener('mousemove', (e) => {
-        cursor.style.left = e.clientX + 'px';
-        cursor.style.top = e.clientY + 'px';
-    });
+    if (!isTouchDevice) {
+        document.addEventListener('mousemove', (e) => {
+            cursor.style.display = 'block';
+            cursor.style.left = e.clientX + 'px';
+            cursor.style.top = e.clientY + 'px';
+        });
 
-    // Add hover effect for interactive elements
-    const hoverElements = ['a', 'button', '.hobby', '.social-link', 'input', 'textarea'];
-    hoverElements.forEach(selector => {
-        document.querySelectorAll(selector).forEach(element => {
-            element.addEventListener('mouseenter', () => {
-                cursor.classList.add('hovered');
-            });
-            element.addEventListener('mouseleave', () => {
-                cursor.classList.remove('hovered');
+        // Add hover effect for interactive elements
+        const hoverElements = ['a', 'button', '.hobby', '.social-link', 'input', 'textarea'];
+        hoverElements.forEach(selector => {
+            document.querySelectorAll(selector).forEach(element => {
+                element.addEventListener('mouseenter', () => {
+                    cursor.classList.add('hovered');
+                });
+                element.addEventListener('mouseleave', () => {
+                    cursor.classList.remove('hovered');
+                });
             });
         });
-    });
+    } else {
+        // Hide cursor on touch devices
+        cursor.style.display = 'none';
+    }
 
     // Animate skills on scroll
     const skillBars = document.querySelectorAll('.skill');
