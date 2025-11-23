@@ -1655,16 +1655,17 @@ section {
 
 .quote {
     font-size: 1.1rem;
-    line-height: 1.4;
+    line-height: 1.6;
     margin: 0;
     padding: 0;
     color: rgba(255, 255, 255, 0.9);
     font-weight: 300;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
     width: 100%;
     text-align: center;
+    word-wrap: break-word;
+    white-space: normal;
+    overflow: visible;
+    padding: 0 10px;
 }
 
 .testimonial-content {
@@ -1765,34 +1766,33 @@ section {
 /* Responsive */
 @media (max-width: 768px) {
     .testimonial-content {
-        padding: 30px 20px;
-    }
-    
-    .testimonial-nav {
-        margin-top: 40px;
-    }
-    
-    .quote {
-        font-size: 1.1rem;
-        padding-left: 30px;
-    }
-    
-    .quote::before {
-        font-size: 4rem;
-    }
-    
-    .author {
-        font-size: 1rem;
-    }
-    
-    .testimonial-prev,
-    .testimonial-next {
-        width: 40px;
-        height: 40px;
+        padding: 25px 15px;
     }
     
     .testimonial-nav {
         margin-top: 30px;
+    }
+    
+    .quote {
+        font-size: 1rem;
+        line-height: 1.5;
+        padding: 0 5px;
+    }
+    
+    .quote::before {
+        font-size: 3rem;
+    }
+    
+    .author {
+        font-size: 0.9rem;
+        margin-top: 15px;
+    }
+    
+    .testimonial-prev,
+    .testimonial-next {
+        width: 36px;
+        height: 36px;
+        font-size: 0.9rem;
     }
 }
 
