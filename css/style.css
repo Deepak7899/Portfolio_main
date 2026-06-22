@@ -77,6 +77,26 @@ section {
     background: var(--primary-color);
 }
 
+.head-typer {
+    display: inline;
+}
+
+.head-cursor {
+    display: inline-block;
+    width: 3px;
+    height: 2.5rem;
+    margin-left: 4px;
+    margin-bottom: -5px;
+    background-color: var(--primary-color);
+    animation: blink 1s infinite;
+    vertical-align: middle;
+    opacity: 0;
+}
+
+.head-cursor.show {
+    opacity: 1;
+}
+
 /* Navigation */
 .navbar {
     position: fixed;

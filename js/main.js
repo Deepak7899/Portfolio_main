@@ -187,6 +187,39 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
+    // Heading typing effect
+    function initHeadingTyping() {
+        const headings = document.querySelectorAll('.section-title .head-typer');
+        
+        headings.forEach(heading => {
+            if (heading.dataset.typed === 'true') return;
+            
+            const rect = heading.closest('.section-title').getBoundingClientRect();
+            const isVisible = rect.top < window.innerHeight - 100;
+            
+            if (isVisible) {
+                heading.dataset.typed = 'true';
+                const text = heading.dataset.text;
+                const cursor = heading.nextElementSibling;
+                let index = 0;
+                heading.textContent = '';
+                cursor.classList.add('show');
+                
+                function type() {
+                    if (index < text.length) {
+                        heading.textContent += text.charAt(index);
+                        index++;
+                        setTimeout(type, 80);
+                    } else {
+                        cursor.classList.remove('show');
+                    }
+                }
+                
+                type();
+            }
+        });
+    }
+
     // Animate elements on scroll
     function animateOnScroll() {
         const elements = document.querySelectorAll('.about-text, .about-visual, .hobby, .skill, .resume-column');
@@ -204,6 +237,9 @@ document.addEventListener('DOMContentLoaded', function() {
         if (skillsSection) {
             animateSkills();
         }
+        
+        // Trigger heading typing
+        initHeadingTyping();
     }
 
     // Navbar scroll effect
