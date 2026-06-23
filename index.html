@@ -175,37 +175,56 @@
             <h2 class="section-title"><span class="head-typer" data-text="My Projects">My Projects</span><span class="head-cursor">|</span></h2>
             <div class="projects-grid">
                 <!-- Project 1 -->
-                <div class="project-card">
-                    <div class="project-icon">
-                        <i class="fas fa-home"></i>
-                    </div>
+                <div class="project-card"
+                     data-icon="fas fa-home"
+                     data-title="Smart Home System"
+                     data-context="College Project"
+                     data-features='["Auto Fire Alarm","Anti-Theft Alarm using Laser & Sensors","Automatic Gas Detection","Light Automation","Temperature Controller Fan"]'
+                     data-theory='[
+                         {"icon":"fa-fire","title":"Auto Fire Alarm","desc":"Detects fire using flame and temperature sensors. Triggers an audible alarm and automatically cuts off gas supply. Sends real-time alerts to the homeowner via GSM module."},
+                         {"icon":"fa-shield-alt","title":"Anti-Theft Alarm","desc":"Uses laser modules with LDR sensors to create invisible security beams across entry points. When a beam is broken, the system triggers a loud siren and sends an immediate alert to the owner."},
+                         {"icon":"fa-wind","title":"Automatic Gas Detection","desc":"Monitors LPG and natural gas levels using MQ-2/MQ-6 sensors. Activates an exhaust fan and buzzer when gas concentration exceeds safe thresholds, preventing potential hazards."},
+                         {"icon":"fa-lightbulb","title":"Light Automation","desc":"PIR motion sensors detect human presence and automatically turn lights on/off. Includes LDR-based ambient light sensing for intelligent brightness control to save energy."},
+                         {"icon":"fa-fan","title":"Temperature Controller Fan","desc":"LM35/DHT11 sensor continuously monitors room temperature. When temperature exceeds a set threshold, the system automatically activates a cooling fan, maintaining optimal comfort."}
+                     ]'>
                     <div class="project-content">
-                        <h3>Smart Home System</h3>
+                        <div class="project-header">
+                            <div class="project-icon"><i class="fas fa-home"></i></div>
+                            <h3>Smart Home System</h3>
+                        </div>
                         <div class="project-tags">
                             <span class="project-tag">IoT</span>
                             <span class="project-tag">Automation</span>
                             <span class="project-tag">Security</span>
                         </div>
                         <p class="project-description">A smart home integrated with an array of cutting-edge technologies providing enhanced security, safety, and comfort.</p>
-                        <ul class="project-features">
-                            <li><i class="fas fa-check-circle"></i> Automatic Security System</li>
-                            <li><i class="fas fa-check-circle"></i> Automatic Gas Detection</li>
-                            <li><i class="fas fa-check-circle"></i> Light Automation</li>
-                            <li><i class="fas fa-check-circle"></i> Temperature Controller Fan</li>
-                        </ul>
                         <div class="project-footer">
+                            <button class="project-read-more">Read More <i class="fas fa-arrow-right"></i></button>
                             <span class="project-context">College Project</span>
                         </div>
                     </div>
                 </div>
 
                 <!-- Project 2 -->
-                <div class="project-card">
-                    <div class="project-icon">
-                        <i class="fas fa-laptop-code"></i>
-                    </div>
+                <div class="project-card"
+                     data-icon="fas fa-laptop-code"
+                     data-title="Pinakastra Website"
+                     data-context="Professional Project"
+                     data-link="https://pinakastra.com/"
+                     data-features='["Built with PHP CodeIgniter","Migrated to WordPress","Payment gateway integration","Full-stack development","cPanel server management"]'
+                     data-theory='[
+                         {"icon":"fa-code","title":"PHP CodeIgniter (Original Build)","desc":"Initially developed using PHP with the CodeIgniter MVC framework. Structured the application with separate Models, Views, and Controllers for clean separation of concerns. Implemented custom routing, form validation, and database abstraction layers for maintainable code."},
+                         {"icon":"fa-wordpress","title":"Migrated to WordPress","desc":"Transitioned the entire site to WordPress for improved content management. Developed a custom theme from scratch, migrated existing content, and extended functionality using custom post types, Advanced Custom Fields, and tailored plugins."},
+                         {"icon":"fa-credit-card","title":"Payment Gateway Integration","desc":"Integrated Razorpay payment gateway for secure online transactions. Handled webhook callbacks for payment confirmation, implemented order management dashboards, and ensured PCI-compliant data handling throughout the checkout flow."},
+                         {"icon":"fa-layer-group","title":"Full-Stack Development","desc":"Owned the complete development lifecycle from database schema design and REST API development to responsive frontend implementation. Managed both server-side logic and client-side experience end-to-end."},
+                         {"icon":"fa-cpanel","title":"cPanel Server Management","desc":"Administered the production server via cPanel — managed Apache configurations, SSL certificate deployment, DNS zone records, email accounts, automated backups, and performed regular security audits."},
+                         {"icon":"fa-bolt","title":"Modern Migration to Vite + React + Flask","desc":"Rewrote the frontend using Vite + React for a faster, component-based UI with hot module replacement during development. The backend now runs on Flask (Python) for cleaner API endpoints and easier maintenance. This modern stack reduced page load times significantly and simplified future feature additions."}
+                     ]'>
                     <div class="project-content">
-                        <h3>Pinakastra Website</h3>
+                        <div class="project-header">
+                            <div class="project-icon"><i class="fas fa-laptop-code"></i></div>
+                            <h3>Pinakastra Website</h3>
+                        </div>
                         <div class="project-tags">
                             <span class="project-tag">PHP</span>
                             <span class="project-tag">CodeIgniter</span>
@@ -213,27 +232,32 @@
                             <span class="project-tag">Payment Gateway</span>
                         </div>
                         <p class="project-description">Developed a complete website solution with custom features and seamless payment integration.</p>
-                        <ul class="project-features">
-                            <li><i class="fas fa-check-circle"></i> Built with PHP CodeIgniter</li>
-                            <li><i class="fas fa-check-circle"></i> Migrated to WordPress</li>
-                            <li><i class="fas fa-check-circle"></i> Payment gateway integration</li>
-                            <li><i class="fas fa-check-circle"></i> Full-stack development</li>
-                            <li><i class="fas fa-check-circle"></i> cPanel server management</li>
-                        </ul>
                         <div class="project-footer">
-                            <a href="http://pinakastra.com/" target="_blank" class="project-link">View Project <i class="fas fa-external-link-alt"></i></a>
+                            <button class="project-read-more">Read More <i class="fas fa-arrow-right"></i></button>
                             <span class="project-context">Professional Project</span>
                         </div>
                     </div>
                 </div>
 
                 <!-- Project 3 -->
-                <div class="project-card">
-                    <div class="project-icon">
-                        <i class="fas fa-database"></i>
-                    </div>
+                <div class="project-card"
+                     data-icon="fas fa-database"
+                     data-title="Exatron Storage Manager/Xstor"
+                     data-context="Professional Project"
+                     data-features='["Full-stack development using React, Node.js, Express.js, and Flask","Ceph backend integration for storage, bucket, and object operations","Enterprise-grade authentication using Keycloak (SSO & RBAC)","Fully Dockerized deployment for modularity and scalability","Server-side management and API orchestration for seamless operations"]'
+                     data-theory='[
+                         {"icon":"fa-react","title":"React + Node.js Frontend","desc":"Built a dynamic single-page interface using React with component-based architecture for managing storage resources. Node.js powers the middleware layer, handling API proxying, session management, and real-time updates for storage operations and dashboard metrics."},
+                         {"icon":"fa-server","title":"Express + Flask Dual Backend","desc":"Dual-backend architecture where Express.js handles RESTful API routing, authentication middleware, and request validation, while Flask (Python) manages Ceph cluster communication, storage orchestration logic, and low-level system operations for maximum reliability."},
+                         {"icon":"fa-hdd","title":"Ceph Storage Integration","desc":"Deep integration with Ceph distributed storage system using librados and RADOS Gateway (RGW). Built complete CRUD operations for storage buckets, object lifecycle management, pool configuration, and real-time cluster health monitoring via the Ceph Manager API."},
+                         {"icon":"fa-key","title":"Keycloak SSO & RBAC","desc":"Enterprise authentication implemented via Keycloak — single sign-on across all services, role-based access control for admin/operator/viewer tiers, token-based session management with OAuth2/OIDC protocols, and centralized user federation."},
+                         {"icon":"fa-docker","title":"Docker Containerization","desc":"Every service containerized with Docker for reproducible deployments. Multi-stage builds keep images lean, docker-compose orchestrates the full stack (React SPA, Node API, Flask API, Keycloak, Ceph client), and environment-specific configs enable seamless dev-to-production promotion."},
+                         {"icon":"fa-project-diagram","title":"Ceph Cluster Orchestration","desc":"Built management features for Ceph pool replication, erasure coding profiles, OSD status monitoring, and automatic rebalancing. Integrated dashboard shows real-time cluster capacity, IOPS metrics, and health status with proactive alerting for storage failures."}
+                     ]'>
                     <div class="project-content">
-                        <h3>Exatron Storage Manager/Xstor</h3>
+                        <div class="project-header">
+                            <div class="project-icon"><i class="fas fa-database"></i></div>
+                            <h3>Exatron Storage Manager/Xstor</h3>
+                        </div>
                         <div class="project-tags">
                             <span class="project-tag">React.js</span>
                             <span class="project-tag">Node.js</span>
@@ -241,15 +265,9 @@
                             <span class="project-tag">Docker</span>
                             <span class="project-tag">Keycloak</span>
                         </div>
-                        <p class="project-description">Developed a full-scale server storage management platform integrated with Ceph for backend operations, featuring a React–Node.js frontend and Express–Flask backend. Fully containerized with Docker for scalable deployment, and secured with Keycloak-based SSO and role-based access control.</p>
-                        <ul class="project-features">
-                            <li><i class="fas fa-check-circle"></i> Full-stack development using React, Node.js, Express.js, and Flask</li>
-                            <li><i class="fas fa-check-circle"></i> Ceph backend integration for storage, bucket, and object operations</li>
-                            <li><i class="fas fa-check-circle"></i> Enterprise-grade authentication using Keycloak (SSO & RBAC)</li>
-                            <li><i class="fas fa-check-circle"></i> Fully Dockerized deployment for modularity and scalability</li>
-                            <li><i class="fas fa-check-circle"></i> Server-side management and API orchestration for seamless operations</li>
-                        </ul>
+                        <p class="project-description">Developed a Ceph-integrated storage management platform with a React–Node.js frontend and Express–Flask backend, containerized using Docker and secured with Keycloak SSO.</p>
                         <div class="project-footer">
+                            <button class="project-read-more">Read More <i class="fas fa-arrow-right"></i></button>
                             <span class="project-context">Professional Project</span>
                         </div>
                     </div>
@@ -258,77 +276,117 @@
         </div>
     </section>
 
+    <!-- Project Detail Overlay -->
+    <div class="project-overlay" id="projectOverlay">
+        <div class="project-overlay-backdrop"></div>
+        <div class="project-overlay-container">
+            <div class="project-overlay-content">
+                <button class="project-overlay-close" id="overlayClose">&times;</button>
+                <div class="project-overlay-header">
+                    <div class="project-overlay-icon" id="overlayIcon"><i class="fas fa-home"></i></div>
+                    <div>
+                        <h2 id="overlayTitle"></h2>
+                        <div class="project-overlay-tags" id="overlayTags"></div>
+                    </div>
+                </div>
+                <p class="project-overlay-description" id="overlayDescription"></p>
+                <div class="project-overlay-body">
+                    <h4 class="overlay-section-title">Key Features</h4>
+                    <ul class="project-overlay-features" id="overlayFeatures"></ul>
+                </div>
+                <div class="project-overlay-body project-overlay-theory" id="overlayTheory" style="display:none;">
+                    <h4 class="overlay-section-title">How It Works</h4>
+                    <div id="overlayTheoryItems"></div>
+                </div>
+                <div class="project-overlay-footer">
+                    <a href="#" class="project-overlay-link" id="overlayLink" target="_blank" style="display:none;">View Project <i class="fas fa-external-link-alt"></i></a>
+                    <span class="project-overlay-context" id="overlayContext"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Skills Section -->
     <section id="skills" class="skills">
         <div class="container">
             <h2 class="section-title"><span class="head-typer" data-text="Technical Skills">Technical Skills</span><span class="head-cursor">|</span></h2>
             <div class="skills-container">
-                <!-- Frontend Skills -->
-                <div class="skill-category">
+                <!-- Frontend -->
+                <div class="skill-category" data-color="blue">
                     <h3 class="skill-category-title">
                         <i class="fas fa-laptop-code"></i> Frontend
                     </h3>
                     <div class="skill-tags">
-                        <span class="skill-tag" data-level="advanced">HTML5 & CSS3</span>
+                        <span class="skill-tag" data-level="advanced">HTML5</span>
+                        <span class="skill-tag" data-level="advanced">CSS3</span>
                         <span class="skill-tag" data-level="advanced">JavaScript</span>
                         <span class="skill-tag" data-level="proficient">React.js</span>
                         <span class="skill-tag" data-level="proficient">Bootstrap</span>
-                        <span class="skill-tag" data-level="proficient">jQuery</span>
-                        <span class="skill-tag" data-level="proficient">WordPress</span>
                     </div>
                 </div>
 
-                <!-- Backend Skills -->
-                <div class="skill-category">
+                <!-- Backend -->
+                <div class="skill-category" data-color="green">
                     <h3 class="skill-category-title">
                         <i class="fas fa-server"></i> Backend
                     </h3>
                     <div class="skill-tags">
                         <span class="skill-tag" data-level="advanced">Node.js</span>
+                        <span class="skill-tag" data-level="proficient">Express.js</span>
                         <span class="skill-tag" data-level="proficient">Python</span>
                         <span class="skill-tag" data-level="proficient">PHP</span>
-                        <span class="skill-tag" data-level="intermediate">Java</span>
-                        <span class="skill-tag" data-level="proficient">Express.js</span>
-                        <span class="skill-tag" data-level="proficient">Razorpay API</span>
+                        <span class="skill-tag" data-level="advanced">REST APIs</span>
                     </div>
                 </div>
 
-                <!-- Database & ORM -->
-                <div class="skill-category">
+                <!-- Databases -->
+                <div class="skill-category" data-color="orange">
                     <h3 class="skill-category-title">
-                        <i class="fas fa-database"></i> Database
+                        <i class="fas fa-database"></i> Databases
                     </h3>
                     <div class="skill-tags">
                         <span class="skill-tag" data-level="proficient">MySQL</span>
-                        <span class="skill-tag" data-level="intermediate">MongoDB</span>
                         <span class="skill-tag" data-level="intermediate">PostgreSQL</span>
-
+                        <span class="skill-tag" data-level="intermediate">MongoDB</span>
                     </div>
                 </div>
 
-                <!-- Tools & Cloud -->
-                <div class="skill-category">
+                <!-- DevOps & Cloud -->
+                <div class="skill-category" data-color="cyan">
                     <h3 class="skill-category-title">
-                        <i class="fas fa-tools"></i> Tools & Cloud
+                        <i class="fas fa-cloud"></i> DevOps & Cloud
                     </h3>
                     <div class="skill-tags">
-                        <span class="skill-tag" data-level="advanced">Git & GitHub</span>
                         <span class="skill-tag" data-level="proficient">Docker</span>
+                        <span class="skill-tag" data-level="advanced">Git & GitHub</span>
                         <span class="skill-tag" data-level="intermediate">AWS</span>
-                        <span class="skill-tag" data-level="intermediate">Firebase</span>
-                        <span class="skill-tag" data-level="proficient">VS Code</span>
-                        <span class="skill-tag" data-level="advanced">cPanel</span>
+                        <span class="skill-tag" data-level="proficient">Linux</span>
+                        <span class="skill-tag" data-level="proficient">Ceph</span>
+                        <span class="skill-tag" data-level="intermediate">Azure</span>
+                        <span class="skill-tag" data-level="intermediate">OpenStack</span>
                     </div>
                 </div>
 
-                <!-- Web & Design Tools -->
-                <div class="skill-category">
+                <!-- AI & Automation -->
+                <div class="skill-category" data-color="purple">
                     <h3 class="skill-category-title">
-                        <i class="fas fa-paint-brush"></i> Web & Design Tools
+                        <i class="fas fa-brain"></i> AI & Automation
                     </h3>
                     <div class="skill-tags">
-                        <span class="skill-tag" data-level="proficient">Canva</span>
+                        <span class="skill-tag" data-level="intermediate">OpenAI API</span>
+                        <span class="skill-tag" data-level="proficient">Prompt Engineering</span>
+                        <span class="skill-tag" data-level="proficient">Flask APIs</span>
+                    </div>
+                </div>
+
+                <!-- CMS & Design -->
+                <div class="skill-category" data-color="pink">
+                    <h3 class="skill-category-title">
+                        <i class="fas fa-paint-brush"></i> CMS & Design
+                    </h3>
+                    <div class="skill-tags">
                         <span class="skill-tag" data-level="proficient">WordPress</span>
+                        <span class="skill-tag" data-level="proficient">Canva</span>
                         <span class="skill-tag" data-level="intermediate">Video Editing</span>
                     </div>
                 </div>

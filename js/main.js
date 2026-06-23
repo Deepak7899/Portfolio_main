@@ -306,6 +306,101 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Initialize testimonial slider
     initTestimonialSlider();
+
+    // Project overlay
+    const overlay = document.getElementById('projectOverlay');
+    const overlayIcon = document.getElementById('overlayIcon');
+    const overlayTitle = document.getElementById('overlayTitle');
+    const overlayTags = document.getElementById('overlayTags');
+    const overlayDescription = document.getElementById('overlayDescription');
+    const overlayFeatures = document.getElementById('overlayFeatures');
+    const overlayContext = document.getElementById('overlayContext');
+    const overlayLink = document.getElementById('overlayLink');
+    const overlayTheory = document.getElementById('overlayTheory');
+    const overlayTheoryItems = document.getElementById('overlayTheoryItems');
+
+    document.querySelectorAll('.project-read-more').forEach(btn => {
+        btn.addEventListener('click', function() {
+            const card = this.closest('.project-card');
+            const icon = card.dataset.icon;
+            const title = card.dataset.title;
+            const context = card.dataset.context;
+            const link = card.dataset.link;
+            const features = JSON.parse(card.dataset.features || '[]');
+            const tags = card.querySelectorAll('.project-tag');
+
+            overlayIcon.innerHTML = `<i class="${icon}"></i>`;
+            overlayTitle.textContent = title;
+            overlayDescription.textContent = card.querySelector('.project-description').textContent;
+            overlayContext.textContent = context;
+
+            overlayTags.innerHTML = '';
+            tags.forEach(tag => {
+                const span = document.createElement('span');
+                span.className = 'project-tag';
+                span.textContent = tag.textContent;
+                overlayTags.appendChild(span);
+            });
+
+            overlayFeatures.innerHTML = '';
+            features.forEach(f => {
+                const li = document.createElement('li');
+                li.textContent = f;
+                overlayFeatures.appendChild(li);
+            });
+
+            const theory = card.dataset.theory;
+            if (theory) {
+                const items = JSON.parse(theory);
+                overlayTheoryItems.innerHTML = '';
+                items.forEach((item, i) => {
+                    const div = document.createElement('div');
+                    div.className = 'theory-item';
+                    div.style.setProperty('--i', i);
+                    div.innerHTML = `
+                        <div class="theory-icon"><i class="fas ${item.icon}"></i></div>
+                        <div class="theory-text">
+                            <h5>${item.title}</h5>
+                            <p>${item.desc}</p>
+                        </div>
+                    `;
+                    overlayTheoryItems.appendChild(div);
+                });
+                overlayTheory.style.display = 'block';
+            } else {
+                overlayTheory.style.display = 'none';
+            }
+
+            if (link) {
+                overlayLink.href = link;
+                overlayLink.style.display = 'inline-flex';
+            } else {
+                overlayLink.style.display = 'none';
+            }
+
+            overlay.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        });
+    });
+
+    function closeOverlay() {
+        overlay.classList.remove('active');
+        document.body.style.overflow = '';
+    }
+
+    document.getElementById('overlayClose').addEventListener('click', closeOverlay);
+    overlay.querySelector('.project-overlay-backdrop').addEventListener('click', closeOverlay);
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') closeOverlay();
+    });
+
+    overlayLink.addEventListener('click', function(e) {
+        e.stopPropagation();
+        const url = this.href;
+        if (url && url !== '#') {
+            window.open(url, '_blank');
+        }
+    });
 });
 
 // Testimonials Slider
